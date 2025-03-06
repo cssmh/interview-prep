@@ -73,12 +73,3 @@ function mergeArraysWithoutDuplicates(arr1, arr2) {
 const a = [1, 2, 4, 4];
 const b = [2, 3, 4, 5, 5, 6];
 console.log(mergeArraysWithoutDuplicates(a, b)); // Output: [1, 2, 4, 3, 5, 6]
-
-
-### Steps to Use:
-1. Create a new repository on GitHub.
-2. Add a `README.md` file and paste the above content into it.
-3. Add an `index.js` file with the JavaScript code for the solutions.
-4. Commit and push the changes to GitHub.
-
-Now, your GitHub repository will display the `README.md` file with the solutions and explanations in a clean and readable format!

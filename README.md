@@ -5,9 +5,11 @@ This repository contains solutions to common JavaScript interview questions. Eac
 ## **Question 1: Get the Last Character from a Word**
 
 ### Problem:
+
 Given a word (e.g., `"student"`), extract the last character (`"t"`).
 
 ### Solution:
+
 ```javascript
 const getString = (word) => {
   let lastOne = "";
@@ -20,6 +22,8 @@ const getString = (word) => {
 };
 
 console.log(getString("student")); // Output: "t"
+console.log(getString("number")); // Output: "r"
+console.log(getString("practice")); // Output: "e"
 
 const numberForSum = (number) => {
   let totalSum = 0;
@@ -35,7 +39,7 @@ console.log(numberForSum(262)); // Output: 10
 console.log(numberForSum(252)); // Output: 9
 
 function reverseString(str) {
-  let reversed = '';
+  let reversed = "";
   for (let i = str.length - 1; i >= 0; i--) {
     reversed += str[i];
   }
@@ -43,6 +47,8 @@ function reverseString(str) {
 }
 
 console.log(reverseString("data")); // Output: "atad"
+console.log(reverseString("string")); // Output: "gnirts"
+console.log(reverseString("all")); // Output: "lla"
 
 const mergeArraysWithoutDuplicates = (...arrays) => {
   const uniqueArray = [];
@@ -59,4 +65,6 @@ const mergeArraysWithoutDuplicates = (...arrays) => {
 
 const a = [1, 2, 4, 4];
 const b = [2, 3, 4, 5, 5, 6];
+
 console.log(mergeArraysWithoutDuplicates(a, b)); // Output: [1, 2, 4, 3, 5, 6]
+```

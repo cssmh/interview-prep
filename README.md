@@ -2,8 +2,6 @@
 
 This repository contains solutions to common JavaScript interview questions. Each solution avoids using built-in functions and relies on loops and basic logic.
 
----
-
 ## **Question 1: Get the Last Character from a Word**
 
 ### Problem:
@@ -11,30 +9,30 @@ Given a word (e.g., `"student"`), extract the last character (`"t"`).
 
 ### Solution:
 ```javascript
-function getLastCharacter(word) {
-  let lastChar = '';
+const getString = (word) => {
+  let lastOne = "";
   for (let i = 0; i < word.length; i++) {
-    if (i === word.length - 1) {
-      lastChar = word[i];
+    if ((i = word.length - 1)) {
+      lastOne = word[i];
     }
+    return lastOne;
   }
-  return lastChar;
-}
+};
 
-console.log(getLastCharacter("student")); // Output: "t"
+console.log(getString("student")); // Output: "t"
 
-function sumDigits(number) {
-  let sum = 0;
-  const numStr = number.toString(); // Convert number to string to iterate
+const numberForSum = (number) => {
+  let totalSum = 0;
+  const numStr = number.toString();
   for (let i = 0; i < numStr.length; i++) {
-    sum += parseInt(numStr[i]); // Convert each character back to a number and add
+    totalSum += parseInt(numStr[i]);
   }
-  return sum;
-}
+  return totalSum;
+};
 
-console.log(sumDigits(12)); // Output: 3
-console.log(sumDigits(262)); // Output: 10
-console.log(sumDigits(252)); // Output: 9
+console.log(numberForSum(12)); // Output: 3
+console.log(numberForSum(262)); // Output: 10
+console.log(numberForSum(252)); // Output: 9
 
 function reverseString(str) {
   let reversed = '';
@@ -76,8 +74,6 @@ const a = [1, 2, 4, 4];
 const b = [2, 3, 4, 5, 5, 6];
 console.log(mergeArraysWithoutDuplicates(a, b)); // Output: [1, 2, 4, 3, 5, 6]
 
-
----
 
 ### Steps to Use:
 1. Create a new repository on GitHub.

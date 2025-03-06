@@ -44,31 +44,18 @@ function reverseString(str) {
 
 console.log(reverseString("data")); // Output: "atad"
 
-function mergeArraysWithoutDuplicates(arr1, arr2) {
-  const merged = [];
-  // Helper function to check if an element exists in the array
-  function exists(array, value) {
-    for (let i = 0; i < array.length; i++) {
-      if (array[i] === value) {
-        return true;
+const mergeArraysWithoutDuplicates = (...arrays) => {
+  const uniqueArray = [];
+
+  for (const arr of arrays) {
+    for (const num of arr) {
+      if (!uniqueArray.includes(num)) {
+        uniqueArray.push(num);
       }
     }
-    return false;
   }
-  // Add elements from the first array
-  for (let i = 0; i < arr1.length; i++) {
-    if (!exists(merged, arr1[i])) {
-      merged.push(arr1[i]);
-    }
-  }
-  // Add elements from the second array
-  for (let i = 0; i < arr2.length; i++) {
-    if (!exists(merged, arr2[i])) {
-      merged.push(arr2[i]);
-    }
-  }
-  return merged;
-}
+  return uniqueArray;
+};
 
 const a = [1, 2, 4, 4];
 const b = [2, 3, 4, 5, 5, 6];

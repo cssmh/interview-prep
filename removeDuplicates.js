@@ -10,4 +10,10 @@ const removeDuplicates = (arr) => {
   return result;
 };
 
+// New component using Set
+const removeDuplicatesSet = (arr) => {
+  return Array.from(new Set(arr));
+};
+
 console.log(removeDuplicates(a));
+console.log(removeDuplicatesSet(a));
